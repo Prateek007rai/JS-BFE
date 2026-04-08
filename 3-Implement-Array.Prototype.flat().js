@@ -4,7 +4,7 @@
  * @param { number } depth
  * @returns { Array }
  */
-\
+
 function flat(arr, depth = 1) {
   let result = [];
 
