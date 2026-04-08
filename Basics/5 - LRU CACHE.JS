@@ -33,3 +33,23 @@ class LRUCache {
     }
 }
 
+const cache = new LRUCache(2); // Limit of 2
+
+console.log("--- Test 1: Basic Set/Get ---");
+cache.put(1, "A");
+cache.put(2, "B");
+console.log(cache.get(1)); // Expected: "A" (1 is now Most Recently Used)
+
+console.log("--- Test 2: Eviction Logic ---");
+cache.put(3, "C");         // This should evict key 2 (because 1 was just accessed)
+console.log(cache.get(2)); // Expected: -1 (Key 2 was evicted)
+console.log(cache.get(3)); // Expected: "C"
+
+console.log("--- Test 3: Updating Existing Key ---");
+cache.put(1, "New A");    // Update key 1
+console.log(cache.get(1)); // Expected: "New A"
+
+console.log("--- Test 4: Final Limit Check ---");
+cache.put(4, "D");         // This should evict key 3
+console.log(cache.get(3)); // Expected: -1
+console.log(cache.get(4)); // Expected: "D"
