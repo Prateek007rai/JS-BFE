@@ -450,6 +450,4 @@ Boolean("hello")   // true
 +[1, 2, 3]         // NaN
 +("42")            // 42
 ```
-
----
-*Made with ❤️ for JavaScript learners. Happy coding!* 🟡
+🟡
