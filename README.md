@@ -1,4 +1,4 @@
-# 🟡 JavaScript Deep Guide
+# 🟡 JavaScript Basics
 
 ---
 
