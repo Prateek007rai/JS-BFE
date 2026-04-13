@@ -15,3 +15,4 @@ function debounce(fn, wait){
 //call debounce
 const callOn = debounce(()=> {console.log("See, it will print after delay")}, 1000)
 callOn()
+callOn()

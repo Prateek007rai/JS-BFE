@@ -30,7 +30,6 @@ Promise.myAll = function(promises) {
 };
 
 
-
 // How to run 
 // Mocking async tasks
 const p1 = new Promise((resolve) => setTimeout(() => resolve("First"), 2000));
