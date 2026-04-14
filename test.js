@@ -97,12 +97,33 @@ class LRUCache{
 
 // Polyfills
 //map
+Array.prototype.myMap = function(cb){
+    let res = []
+    for (let i = 0; i< this.length; i++){
+        res.push(cb(this[i], i , this))
+    }
+    return res
+}
+const arr = [7,8,9,10,11]
+console.log(arr.myMap((n)=> n*2))
 
 
 //filters
+Array.prototype.myFilter = function (cb){
+    let res = []
+
+    for(let i = 0; i< this.length; i++){
+        if(cb(this[i], i, this)){
+            res.push(this[i], i , this)
+        }
+    }
+    return res
+}
+console.log(arr.filter(n=> n%2 == 0))
 
 
 //reduce
+
 
 
 //flatten
