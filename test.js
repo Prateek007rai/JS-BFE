@@ -36,4 +36,30 @@ function throttle (fn, wait){
 
 
 
+// add date in date
+const date = "2026-04-14"
+const newDate = new Date(date);
+
+newDate.setDate(newDate.getDate() + 1)
+
+console.log(newDate.toISOString().split("T")[0])
+
+//remove duplicate
+
+
+//LRU cache
+
+
+// Polyfills
+//map
+
+
+//filters
+
+
+//reduce
+
+
+//flatten
+
 
