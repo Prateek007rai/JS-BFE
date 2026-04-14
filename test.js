@@ -123,7 +123,15 @@ console.log(arr.filter(n=> n%2 == 0))
 
 
 //reduce
+Array.prototype.myReduce = function(cb, initialValue){
+    let acc = initialValue !== undefined ? initialValue : this[0]
+    let startIndex = initialValue !== undefined ? 0 : 1
 
+    for (let i = startIndex; i < this.length; i++){
+        acc = cb(acc, this[i], i, this)
+    }
+    return acc;
+}
 
 
 //flatten
