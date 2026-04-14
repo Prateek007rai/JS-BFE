@@ -15,3 +15,25 @@ function debounce (fn, delay) {
 const callOn = debounce(()=> {console.log("See, it will print after delay")}, 1000)
 callOn()
 callOn()
+
+
+// Throttle function
+
+function throttle (fn, wait){
+    let canRun  = true;
+
+    return function(){
+        if (!canRun) { return }
+   
+        canRun = false;
+        fn();
+        setTimeout(()=> {
+            canRun = true
+        }, wait)
+
+    }
+}
+
+
+
+
