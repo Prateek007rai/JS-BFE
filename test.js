@@ -45,9 +45,54 @@ newDate.setDate(newDate.getDate() + 1)
 console.log(newDate.toISOString().split("T")[0])
 
 //remove duplicate
+function rem_dup(arr){
+    let seen = {}
+    let res = []
+    for (let num of arr){
+        if(!seen[num]){
+            seen[num] = true
+            res.push(num)
+        }
+    }
+    return res
+}
+console.log(rem_dup([1,2,2,3,3,3,4,4,5,5]))
 
 
 //LRU cache
+class LRUCache{
+    constructor(limit){
+        this.cache = new Map();
+        this.limit = limit;
+    }
+
+    // get function
+    get(key){
+        if(!this.cache.has(key)){
+            return
+        }
+
+        const value = this.cache.get(key);
+        this.cache.delete(key);
+        this.cache.set(key, value);
+        return value;
+    }
+
+    // put function
+    put(key, value){
+        // delete if key is present - remove existing
+        // else check for size, if > limit, then remove first entry
+        // finally put
+
+        if(this.cache.has(key)){
+            this.cache.delete(key);
+        }else if (this.cache.size >= this.limit){              //when it will reach greater or equal to max limit
+            const first  = this.cache.keys().next().value;
+            this.cache.delete(first)
+        }
+        this.cache.set(key, value)
+    }
+}
 
 
 // Polyfills
