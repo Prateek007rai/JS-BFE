@@ -1,14 +1,13 @@
 //debounce function
-
-function debounce(fn, wait){
-    let timer
+function debounce (fn, delay) {
+    let timer;
 
     return function (...args){
         clearTimeout(timer);
 
-        timer = setTimeout(()=> {
+        timer = setTimeout(()=>{
             fn.apply(this, args)
-        }, wait)
+        }, delay)
     }
 }
 
