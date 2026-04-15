@@ -1,6 +1,6 @@
 // Remove All Whitespace
 
 function removeWhitespace(str) {
-  return str.replace(/\s+/g, "");
+  return str.replaceAll(" ", "");
 }
 console.log(removeWhitespace(" a b  c ")); // "abc"
