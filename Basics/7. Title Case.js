@@ -1,0 +1,8 @@
+// Title Case a Sentence
+
+function titleCase(str) {
+  return str.toLowerCase().split(" ")
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+console.log(titleCase("i love coding")); // "I Love Coding"
