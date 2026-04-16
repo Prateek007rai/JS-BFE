@@ -188,7 +188,18 @@ function is_sort_arr(arr){
 console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
 
 // Intersection of Two Arrays
+function intersection_ele(arr1, arr2){
+    const res = [];
+    const set_arr1 = new Set(arr1)
 
+    for(let ele of arr2){
+        if(set_arr1.has(ele)){
+            res.push(ele);
+        }
+    }
+    return res;
+}
+console.log("Intersection elemnets of two array : ", intersection_ele([1,2,2,3,6], [2,2,4,5,6,7]))
 
 
 // Title Case a Sentence
