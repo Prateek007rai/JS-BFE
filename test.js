@@ -170,12 +170,29 @@ function rem_dup(arr){
 console.log(rem_dup([1,1,1,2,2,2,3,3,3,3,4,4]))
 
 // Check for sorted array
+function is_sort_arr(arr){
+    let ascending = true;
+    let descending = true;
 
+    for(let i=1; i< arr.length; i++){
+        if(arr[i] < arr[i-1]){
+            ascending = false
+        }
+        if(arr[i] > arr[i-1]){
+            descending = false
+        }
+    }
+
+    return ascending || descending;
+}
+console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
 
 // Intersection of Two Arrays
 
 
+
 // Title Case a Sentence
+
 
 
 // Find Duplicate Characters
