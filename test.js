@@ -194,8 +194,8 @@ console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
 // Title Case a Sentence
 
 
+// Find Duplicate Characters, print till twice
 
-// Find Duplicate Characters
 
 
 // Remove All Whitespace
@@ -204,4 +204,22 @@ function rem_whiteSpace(s){
 }
 console.log("Remove white space -> ", rem_whiteSpace("Hey Prateek"))
 
-// Longest Word in a String
+// Longest Word in a Sentence
+function long_str(s){
+    let longest = ""
+    let curr_word = ""
+
+    for (let i = 0; i< s.length; i++){
+        curr_word += s[i]
+        if(s[i] === " " || i === s.length - 1){
+            if(curr_word.trim().length > longest.length){
+                longest = curr_word;
+            }
+            curr_word = ""
+        }
+    }
+
+    return longest
+}
+
+console.log(long_str("Hey Prateek how are you? Good Morning"))
