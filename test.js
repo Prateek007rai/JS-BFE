@@ -169,3 +169,19 @@ function rem_dup(arr){
 }
 console.log(rem_dup([1,1,1,2,2,2,3,3,3,3,4,4]))
 
+// Check for sorted array
+
+
+// Intersection of Two Arrays
+
+
+// Title Case a Sentence
+
+
+// Find Duplicate Characters
+
+
+// Remove All Whitespace
+
+
+// Longest Word in a String
