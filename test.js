@@ -199,6 +199,9 @@ console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
 
 
 // Remove All Whitespace
-
+function rem_whiteSpace(s){
+    return s.replaceAll(" ", "")
+}
+console.log("Remove white space -> ", rem_whiteSpace("Hey Prateek"))
 
 // Longest Word in a String
