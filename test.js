@@ -192,7 +192,10 @@ console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
 
 
 // Title Case a Sentence
-
+function title_case(s){
+   return s.toLowerCase().split(" ").map((word)=> word = word[0].toUpperCase() + word.slice(1,)).join(" ")
+}
+console.log(title_case("hey pratEEk, how do you do"))
 
 // Find Duplicate Characters, print till twice
 
