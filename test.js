@@ -197,9 +197,23 @@ function title_case(s){
 }
 console.log(title_case("hey pratEEk, how do you do"))
 
-// Find Duplicate Characters, print till twice
+// Find Duplicate Characters ex: "programming", o/p: 'r' 'm' 'g'
+function rem_dup(word){
+    const counter = {}
+    const res = []
 
+    for (let i=0; i< word.length; i++){
+      counter[word[i]] = (counter[word[i]] || 0) + 1
+    }
 
+    for(let i in counter){
+        if(counter[i] > 1){
+           res.push(i)
+        }
+    }
+    return res;
+}
+console.log("Duplicate Chars: ", rem_dup("programming"))
 
 // Remove All Whitespace
 function rem_whiteSpace(s){
