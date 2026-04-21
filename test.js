@@ -251,3 +251,6 @@ function long_str(s){
 }
 
 console.log(long_str("Hey Prateek how are you? Good Morning"))
+
+
+// flatten the array
