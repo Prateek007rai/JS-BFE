@@ -269,3 +269,36 @@ function flatten_arr(arr){
 }
 
 console.log("Flatten the arr: ", flatten_arr([1,[2,3,[4,5,88,90]]]))
+
+// LRU caching
+class LRUCache{
+    // constructor
+    constructor(limit){
+        this.limit = limit,
+        this.cache = new Map()
+    }
+
+    // get function
+    get(key){
+        if (!this.cache.has(key)){
+            return -1
+        }
+
+        const value = this.cache.get(key)
+        this.cache.delete(key)
+        this.cache.set(key, value)
+        return value
+    }
+
+    // put function
+    put(key, value){
+        if(this.cache.has(key)){
+            this.cache.delete(key)
+        }else if(this.cache.size >= this.limit){
+            const firstKey = this.cache.keys().next().value
+            this.cache.delete(firstKey)
+        }
+
+        this.cache.set(key, value)
+    }
+}
