@@ -271,7 +271,7 @@ function flatten_arr(arr){
 console.log("Flatten the arr: ", flatten_arr([1,[2,3,[4,5,88,90]]]))
 
 // LRU caching
-class LRUCache{
+class LRUCache_1{
     // constructor
     constructor(limit){
         this.limit = limit,
@@ -302,3 +302,28 @@ class LRUCache{
         this.cache.set(key, value)
     }
 }
+
+
+// throttle function
+function throttle_22(fn, limit){
+   let canRun = true;
+
+   return function(...args){
+    if (!canRun){
+        return;
+    }
+
+    fn.apply(this, args)
+    canRun = false;
+    setTimeout(()=>{
+        canRun = true
+    }, limit)
+   }
+}
+
+let check = throttle(()=> {
+    console.log("Prateek Rai --------")
+}, 500)
+
+check();
+check();     //this will be ignored bcz triggered within limit time.
