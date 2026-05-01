@@ -347,3 +347,24 @@ function flatten_2(arr, k){
 }
 
 console.log("---Flatten array: ", flatten_2([2,3,[55,6,7,[88,90, [1,2,[555,7777,[3,889]]]]]], 4))
+
+
+// debounce function in js
+function debounce_2(fn, delay){
+   let timer;
+
+   return function (...args){
+    clearTimeout(timer);
+
+    timer = setTimeout(()=> {
+        fn.apply(this, args)
+    }, delay)
+   }
+}
+
+const action_func = () => {
+    console.log("Displayed Prateek's debounce effect")
+}
+
+const callDebounced = debounce_2(action_func, 2000);
+callDebounced()
