@@ -365,6 +365,5 @@ function debounce_2(fn, delay){
 const action_func = () => {
     console.log("Displayed Prateek's debounce effect")
 }
-
 const callDebounced = debounce_2(action_func, 2000);
 callDebounced()
