@@ -327,3 +327,23 @@ let check = throttle(()=> {
 
 check();
 check();     //this will be ignored bcz triggered within limit time.
+
+
+function flatten_2(arr, k){
+    if(k == 0){
+        return arr;
+    }
+    let res = []
+
+    for(let i=0; i<arr.length ; i++){
+       if(Array.isArray(arr[i])){
+          const flat_arr = flatten_2(arr[i], k - 1)
+          res = res.concat(flat_arr)
+       }else{
+        res.push(arr[i])
+       }
+    }
+    return res
+}
+
+console.log("---Flatten array: ", flatten_2([2,3,[55,6,7,[88,90, [1,2,[555,7777,[3,889]]]]]], 4))
