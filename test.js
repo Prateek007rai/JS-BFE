@@ -367,3 +367,23 @@ const action_func = () => {
 }
 const callDebounced = debounce_2(action_func, 2000);
 callDebounced()
+
+
+// Polyfill Map:
+Array.prototype.myMap = function(cb){
+   const res = []
+   for(let i=0; i<this.length; i++){
+    res.push(cb(this[i], i, this))
+   }
+   return res
+}
+const arr4 = [8,99,0,3]
+const output_arr = arr4.myMap(n => n*2)
+console.log("see----->",output_arr)
+
+
+// Polyfill Promises
+
+
+// Max K duplicates allows
+
