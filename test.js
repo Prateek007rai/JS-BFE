@@ -383,10 +383,34 @@ console.log("see----->",output_arr)
 
 
 // Polyfill Promises
+Promise.myAll = function(promises){
+    return new Promise((resolve, reject) => {
+        const res = []
+        const completedCount = 0
+
+        if (promises.length === 0){
+            return resolve([])
+        }
+
+        promises.forEach((promise, index)=> {
+            Promise.resolve(promise)
+            .then((value)=> {
+                res[index] = value;
+                completedCount += 1;
+
+                if(completedCount === promises.length){
+                    resolve(results)
+                }
+            })
+            .catch((err)=> {
+                reject(err)
+            })
+        })
+    })
+}
 
 
 // Max K duplicates allows
-
 function allowKdups(arr, k){
     const counter = {}
     const res = []
