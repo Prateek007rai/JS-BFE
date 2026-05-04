@@ -387,3 +387,18 @@ console.log("see----->",output_arr)
 
 // Max K duplicates allows
 
+function allowKdups(arr, k){
+    const counter = {}
+    const res = []
+
+    for(let i=0; i<arr.length; i++){
+       counter[arr[i]] = (counter[arr[i]] || 0) + 1
+
+       if(counter[arr[i]] <= k){
+        res.push(arr[i])
+       }
+    } 
+    return res
+}
+
+console.log(allowKdups([1,1,1,1,2,2,2,2,2,2,3,5,88,9], 2))
