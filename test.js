@@ -460,3 +460,15 @@ Array.prototype.myFilter = function(cb){
     }
     return res
 }
+
+
+// Polyfill - Reduce
+Array.prototype.myReduce = function(cb, initialValue){
+    const acc = initialValue ? initialValue : this[0]
+    const startIndex = initialValue ? 0 : 1
+
+    for(let i=startIndex; i<this.length; i++){
+        acc = cb(acc, this[i], i , this)
+    }
+    return acc
+}
