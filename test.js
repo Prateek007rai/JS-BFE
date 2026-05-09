@@ -472,3 +472,22 @@ Array.prototype.myReduce = function(cb, initialValue){
     }
     return acc
 }
+
+// LRU Cache
+
+
+// Debounce 
+function debounce223(fn, delay){
+    let timer;
+
+    return function(...args){
+        clearTimeout(timer);
+
+        timer = setTimeout(()=> {
+            fn.apply(this, args)
+        }, delay)
+    }
+}
+
+
+// Throttle
