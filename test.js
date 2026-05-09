@@ -426,3 +426,37 @@ function allowKdups(arr, k){
 }
 
 console.log(allowKdups([1,1,1,1,2,2,2,2,2,2,3,5,88,9], 2))
+
+
+// Add 1 date in a date
+const dateVal = '2026-05-09'
+
+const d = new Date(dateVal)
+
+d.setDate(d.getDate() + 2);
+
+console.log(d.toISOString().split("T")[0])
+
+
+// Polyfill - array map
+Array.prototype.myMap = function(cb){
+    const res = []
+
+    for(let i=0; i<this.length; i++){
+        res.push(cb(this[i], i, this))
+    }
+    return res
+}
+
+// Polyfill - filter
+
+Array.prototype.myFilter = function(cb){
+    const res = []
+
+    for (let i=0; i<this.length; i++){
+       if(cb[this[i], i, this]){
+        res.push(cb[this[i], i, this])
+       }
+    }
+    return res
+}
