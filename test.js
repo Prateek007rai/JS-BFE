@@ -491,3 +491,6 @@ function debounce223(fn, delay){
 
 
 // Throttle
+function thorttle_9(fn, limit){
+
+}
