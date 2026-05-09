@@ -40,3 +40,16 @@ Array.prototype.myMap = function(cb){
     }
     return res
 }
+
+// Polyfill - filter
+
+Array.prototype.myFilter = function(cb){
+    const res = []
+
+    for (let i=0; i<this.length; i++){
+       if(cb[this[i], i, this]){
+        res.push(cb[this[i], i, this])
+       }
+    }
+    return res
+}
