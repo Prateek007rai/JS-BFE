@@ -19,3 +19,13 @@ function count_freq(arr){
 }
 
 console.log(count_freq(['a','b','c','d','a','b','c','e','b','a','c','f']))
+
+
+// Add 1 date in a date
+const dateVal = '2026-05-09'
+
+const d = new Date(dateVal)
+
+d.setDate(d.getDate() + 2);
+
+console.log(d.toISOString().split("T")[0])
