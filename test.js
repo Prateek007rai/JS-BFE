@@ -492,5 +492,17 @@ function debounce223(fn, delay){
 
 // Throttle
 function thorttle_9(fn, limit){
+    let canRun = true;
 
+    return function(){
+        if(!canRun){
+            return
+        }
+
+        canRun = false
+        fn();
+        setTimeout(()=> {
+            canRun = true
+        }, limit)
+    }
 }
