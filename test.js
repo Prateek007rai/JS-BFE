@@ -473,9 +473,6 @@ Array.prototype.myReduce = function(cb, initialValue){
     return acc
 }
 
-// LRU Cache
-
-
 // Debounce 
 function debounce223(fn, delay){
     let timer;
@@ -499,10 +496,20 @@ function thorttle_9(fn, limit){
             return
         }
 
-        canRun = false
         fn();
+        canRun = false
         setTimeout(()=> {
             canRun = true
         }, limit)
     }
 }
+
+
+// LRU Cache
+
+
+// Polyfill - Flatten Array
+
+
+// Polyfill - Promise ALL
+
