@@ -527,6 +527,15 @@ class LRU_CACHE{
     }
 
     // set by key with value
+    put(key, value){
+        if(this.cache.has(key)){
+            this.cache.delete(key);
+        }else if(this.cache.size >= this.limit){ 
+            const firstEle = this.cache.keys().next().value;
+            this.cache.delete(firstEle);
+        }
+        this.cache.set(key, value)
+    }
 
 }
 
