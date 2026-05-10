@@ -540,7 +540,20 @@ class LRU_CACHE{
 }
 
 // Polyfill - Flatten Array
+function flatten_3(arr){
+    let res = []
+    for(let ele of arr){
+        if(Array.isArray(ele)){
+            const output = flatten_3(ele);
+            res = res.concat(output)
+        }else{
+            res.push(ele);
+        }
+    }
+    return res;
+}
 
+console.log(flatten_3([2,3,[45,666,[78,90,[0,9]]]]))
 
 // Polyfill - Promise ALL
 
