@@ -556,4 +556,26 @@ function flatten_3(arr){
 console.log(flatten_3([2,3,[45,666,[78,90,[0,9]]]]))
 
 // Polyfill - Promise ALL
+Promise.myAll = function(promises){
+    return new Promise((resolve, reject)=>{
+       const res = []
+       let counter = 0;
 
+       if(promises.length === 0){
+        return resolve([])
+       }
+
+       promises.forEach((promise, index)=> {
+        Promise.resolve(promise)
+        .then((data)=> {
+            res[index] = data;
+            counter ++;
+
+            if(counter === promises.length){
+                resolve(res)
+            }
+        })
+        .catch((err)=> {reject(err)})
+       })
+    })
+}
