@@ -506,7 +506,15 @@ function thorttle_9(fn, limit){
 
 
 // LRU Cache
+class LRU_CACHE{
 
+    // constructor set up
+
+    // get by key
+
+    // set by key with value
+
+}
 
 // Polyfill - Flatten Array
 
