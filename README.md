@@ -4,16 +4,7 @@
 
 ## 📌 Table of Contents
 
-1. [Variables & Data Types](#1-variables--data-types)
-2. [Strings & String Methods](#2-strings--string-methods)
-3. [Type Conversion](#3-type-conversion)
-4. [Arrays & Array Methods](#4-arrays--array-methods)
-5. [Objects & Object Methods](#5-objects--object-methods)
-6. [Sets & Maps](#6-sets--maps)
-7. [Array vs Set vs Object vs Map — Comparison](#7-array-vs-set-vs-object-vs-map--comparison)
-8. [Loops & Iteration](#8-loops--iteration)
-9. [Functions — Basics to Advanced](#9-functions--basics-to-advanced)
-10. [Quick Cheat Sheet](#10-quick-cheat-sheet)
+
 
 ---
 
