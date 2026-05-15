@@ -11,7 +11,7 @@ function curry (fn){
         if(args.length >= fn.length){
             return fn(...args)
         }else{
-            
+            //if not enough args → return another function
             return function(...nextArgs){
                 // collect next arguments -> combine old + new args and repeat
                 return curried(...args, ...nextArgs)
