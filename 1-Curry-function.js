@@ -5,7 +5,7 @@
 // Step - 4: collect next arguments -> combine old + new args and repeat
 
 function curry (fn){
-    // collect arguments
+ 
     return function curried(...args){
         // if enough arguments → call function
         if(args.length >= fn.length){
