@@ -23,10 +23,7 @@ function curry (fn){
 
 
 
-// test function
-const join = (a, b, c) => {
-  return `${a}_${b}_${c}`;
-};
+
 
 // create curried version
 const curriedJoin = curry(join);
