@@ -1,5 +1,8 @@
 // Curry function 
-
+// Step - 1: collect arguments
+// Step - 2: if enough arguments → call function
+// Step - 3: if not enough args → return another function
+// Step - 4: collect next arguments -> combine old + new args and repeat
 
 function curry (fn){
     // collect arguments
