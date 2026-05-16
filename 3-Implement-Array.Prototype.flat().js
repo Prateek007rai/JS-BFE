@@ -1,4 +1,5 @@
 // This is a JavaScript coding problem from BFE.dev 
+// Time: O(n)
 /**
  * @param { Array } arr
  * @param { number } depth
