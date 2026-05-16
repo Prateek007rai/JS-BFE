@@ -1,4 +1,4 @@
-# 🟡 JavaScript Ba
+# 🟡 JavaScript Basics
 
 ---
 
