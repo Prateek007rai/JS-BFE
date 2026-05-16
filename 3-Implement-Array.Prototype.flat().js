@@ -20,5 +20,5 @@ function flat(arr, depth = 1) {
   return result;
 }
 
-console.log(flat([1, [2], [3, [4]]], 1))
+
 
