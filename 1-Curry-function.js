@@ -31,8 +31,4 @@ const join = (a, b, c) => {
 // create curried version
 const curriedJoin = curry(join);
 
-// test cases
-console.log(curriedJoin(1, 2, 3));   // 1_2_3
-console.log(curriedJoin(1)(2, 3));   // 1_2_3
-console.log(curriedJoin(1, 2)(3));   // 1_2_3
-console.log(curriedJoin(1)(2)(3));   // 1_2_3
+
