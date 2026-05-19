@@ -1,7 +1,4 @@
-/**
- * @param { (...args: any[]) => any } fn
- * @returns { (...args: any[]) => any }
- */
+
 function curry(fn) {
   return function curried(...args) {
     // 1. Check if we have enough arguments
