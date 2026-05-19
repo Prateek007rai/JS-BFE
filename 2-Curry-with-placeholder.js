@@ -3,18 +3,7 @@
  * @returns { (...args: any[]) => any }
  */
 function curry(fn) {
-  return function curried(...args) {
-    // 1. Check if we have enough arguments
-    // We only look at the first 'fn.length' arguments.
-    // If any of them are placeholders, we don't have enough yet.
-    const expectedArgs = args.slice(0, fn.length);
-    const isEnough = expectedArgs.length >= fn.length && 
-                     expectedArgs.every(arg => arg !== curry.placeholder);
-
-    if (isEnough) {
-      return fn.apply(this, args);
-    }
-
+  
     // 2. If not enough, return a new function to collect more
     return function(...newArgs) {
       const finalArgs = [];
