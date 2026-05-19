@@ -54,10 +54,7 @@ function curry(fn) {
 // Define the placeholder
 curry.placeholder = Symbol();
 
-// --- TEST CASE ---
-const join = (a, b, c) => `${a}_${b}_${c}`;
-const curriedJoin = curry(join);
-const _ = curry.placeholder;
+
 
 console.log(curriedJoin(1, 2, 3));          // '1_2_3'
 console.log(curriedJoin(_, 2)(1, 3));       // '1_2_3'
