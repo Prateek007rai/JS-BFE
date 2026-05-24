@@ -13,7 +13,7 @@
 7. [Array vs Set vs Object vs Map — Comparison](#7-array-vs-set-vs-object-vs-map--comparison)
 8. [Loops & Iteration](#8-loops--iteration)
 9. [Functions — Basics to Advanced](#9-functions--basics-to-advanced)
-
+10. [Quick Cheat Sheet](#10-quick-cheat-sheet)
 
 ---
 
