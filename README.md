@@ -44,7 +44,7 @@ console.log(typeof not_defined);  // "undefined"
 
 ---
 
-
+## 2. Strings & String Methods
 
 > Strings are **immutable** and can be enclosed in `'single'`, `"double"`, or `` `backticks` ``.
 
