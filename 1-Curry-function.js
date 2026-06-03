@@ -9,7 +9,7 @@ function curry (fn){
     return function curried(...args){
         // if enough arguments → call function
         if(args.length >= fn.length){
-            return fn(...args)
+           
         }else{
             //if not enough args → return another function
             return function(...nextArgs){
