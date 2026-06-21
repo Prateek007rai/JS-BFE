@@ -12,9 +12,9 @@ function debounce (fn, delay) {
 }
 
 //call debounce
-const callOn = debounce(()=> {console.log("See, it will print after delay")}, 1000)
-callOn()
-callOn()
+// const callOn = debounce(()=> {console.log("See, it will print after delay")}, 1000)
+// callOn()
+// callOn()
 
 
 // Throttle function
@@ -42,7 +42,7 @@ const newDate = new Date(date);
 
 newDate.setDate(newDate.getDate() + 1)
 
-console.log(newDate.toISOString().split("T")[0])
+//console.log(newDate.toISOString().split("T")[0])
 
 //remove duplicate
 function rem_dup(arr){
@@ -56,7 +56,7 @@ function rem_dup(arr){
     }
     return res
 }
-console.log(rem_dup([1,2,2,3,3,3,4,4,5,5]))
+//console.log(rem_dup([1,2,2,3,3,3,4,4,5,5]))
 
 
 //LRU cache
@@ -72,7 +72,7 @@ class LRUCache{
             return
         }
 
-        const value = this.cache.get(key);
+        //const value = this.cache.get(key);
         this.cache.delete(key);
         this.cache.set(key, value);
         return value;
@@ -87,7 +87,7 @@ class LRUCache{
         if(this.cache.has(key)){
             this.cache.delete(key);
         }else if (this.cache.size >= this.limit){              //when it will reach greater or equal to max limit
-            const first  = this.cache.keys().next().value;
+            //const first  = this.cache.keys().next().value;
             this.cache.delete(first)
         }
         this.cache.set(key, value)
@@ -104,8 +104,8 @@ Array.prototype.myMap = function(cb){
     }
     return res
 }
-const arr = [7,8,9,10,11]
-console.log(arr.myMap((n)=> n*2))
+//const arr = [7,8,9,10,11]
+//console.log(arr.myMap((n)=> n*2))
 
 
 //filters
@@ -119,7 +119,7 @@ Array.prototype.myFilter = function (cb){
     }
     return res
 }
-console.log(arr.filter(n=> n%2 == 0))
+//console.log(arr.filter(n=> n%2 == 0))
 
 
 //reduce
@@ -148,13 +148,13 @@ function flatten (arr){
     return res
 }
 
-console.log(flatten([1,2,[3,4,[5,6]]]))
+//console.log(flatten([1,2,[3,4,[5,6]]]))
 
 
 // Print max twice and remove duplicates
 function rem_dup(arr){
-   const counter = {}
-   const res = []
+   //const counter = {}
+   //const res = []
 
    for (let num of arr){
     counter[num] = (counter[num] || 0) + 1
@@ -164,10 +164,10 @@ function rem_dup(arr){
     }
    }
 
-   console.log(counter)
+   //console.log(counter)
    return res
 }
-console.log(rem_dup([1,1,1,2,2,2,3,3,3,3,4,4]))
+//console.log(rem_dup([1,1,1,2,2,2,3,3,3,3,4,4]))
 
 // Check for sorted array
 function is_sort_arr(arr){
@@ -185,12 +185,12 @@ function is_sort_arr(arr){
 
     return ascending || descending;
 }
-console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
+//console.log("is it sorted: ", is_sort_arr([1,2,3,4,5]))
 
 // Intersection of Two Arrays
 function intersection_ele(arr1, arr2){
-    const res = [];
-    const set_arr1 = new Set(arr1)
+    //const res = [];
+    //const set_arr1 = new Set(arr1)
 
     for(let ele of arr2){
         if(set_arr1.has(ele)){
@@ -199,19 +199,19 @@ function intersection_ele(arr1, arr2){
     }
     return res;
 }
-console.log("Intersection elemnets of two array : ", intersection_ele([1,2,2,3,6], [2,2,4,5,6,7]))
+//console.log("Intersection elemnets of two array : ", intersection_ele([1,2,2,3,6], [2,2,4,5,6,7]))
 
 
 // Title Case a Sentence
 function title_case(s){
    return s.toLowerCase().split(" ").map((word)=> word = word[0].toUpperCase() + word.slice(1,)).join(" ")
 }
-console.log(title_case("hey pratEEk, how do you do"))
+//console.log(title_case("hey pratEEk, how do you do"))
 
 // Find Duplicate Characters ex: "programming", o/p: 'r' 'm' 'g'
 function rem_dup(word){
-    const counter = {}
-    const res = []
+    //const counter = {}
+    //const res = []
 
     for (let i=0; i< word.length; i++){
       counter[word[i]] = (counter[word[i]] || 0) + 1
@@ -224,13 +224,13 @@ function rem_dup(word){
     }
     return res;
 }
-console.log("Duplicate Chars: ", rem_dup("programming"))
+//console.log("Duplicate Chars: ", rem_dup("programming"))
 
 // Remove All Whitespace
 function rem_whiteSpace(s){
     return s.replaceAll(" ", "")
 }
-console.log("Remove white space -> ", rem_whiteSpace("Hey Prateek"))
+//console.log("Remove white space -> ", rem_whiteSpace("Hey Prateek"))
 
 // Longest Word in a Sentence
 function long_str(s){
@@ -250,7 +250,7 @@ function long_str(s){
     return longest
 }
 
-console.log(long_str("Hey Prateek how are you? Good Morning"))
+//console.log(long_str("Hey Prateek how are you? Good Morning"))
 
 
 // flatten the array
@@ -259,7 +259,7 @@ function flatten_arr(arr){
 
     for(let i = 0; i<arr.length; i++){
         if(Array.isArray(arr[i])){
-            const flat = flatten_arr(arr[i]);
+            //const flat = flatten_arr(arr[i]);
             res = res.concat(flat)
         }else{
             res.push(arr[i])
@@ -268,11 +268,11 @@ function flatten_arr(arr){
     return res
 }
 
-console.log("Flatten the arr: ", flatten_arr([1,[2,3,[4,5,88,90]]]))
+//console.log("Flatten the arr: ", flatten_arr([1,[2,3,[4,5,88,90]]]))
 
 // LRU caching
 class LRUCache_1{
-    // constructor
+    // //constructor
     constructor(limit){
         this.limit = limit,
         this.cache = new Map()
@@ -284,7 +284,7 @@ class LRUCache_1{
             return -1
         }
 
-        const value = this.cache.get(key)
+        //const value = this.cache.get(key)
         this.cache.delete(key)
         this.cache.set(key, value)
         return value
@@ -295,7 +295,7 @@ class LRUCache_1{
         if(this.cache.has(key)){
             this.cache.delete(key)
         }else if(this.cache.size >= this.limit){
-            const firstKey = this.cache.keys().next().value
+            //const firstKey = this.cache.keys().next().value
             this.cache.delete(firstKey)
         }
 
@@ -322,7 +322,7 @@ function throttle_22(fn, limit){
 }
 
 let check = throttle(()=> {
-    console.log("Prateek Rai --------")
+    //console.log("Prateek Rai --------")
 }, 500)
 
 check();
@@ -337,7 +337,7 @@ function flatten_2(arr, k){
 
     for(let i=0; i<arr.length ; i++){
        if(Array.isArray(arr[i])){
-          const flat_arr = flatten_2(arr[i], k - 1)
+          //const flat_arr = flatten_2(arr[i], k - 1)
           res = res.concat(flat_arr)
        }else{
         res.push(arr[i])
@@ -346,7 +346,7 @@ function flatten_2(arr, k){
     return res
 }
 
-console.log("---Flatten array: ", flatten_2([2,3,[55,6,7,[88,90, [1,2,[555,7777,[3,889]]]]]], 4))
+//console.log("---Flatten array: ", flatten_2([2,3,[55,6,7,[88,90, [1,2,[555,7777,[3,889]]]]]], 4))
 
 
 // debounce function in js
@@ -362,31 +362,31 @@ function debounce_2(fn, delay){
    }
 }
 
-const action_func = () => {
-    console.log("Displayed Prateek's debounce effect")
-}
-const callDebounced = debounce_2(action_func, 2000);
-callDebounced()
+//const action_func = () => {
+    //console.log("Displayed Prateek's debounce effect")
+// }
+//const callDebounced = debounce_2(action_func, 2000);
+// callDebounced()
 
 
 // Polyfill Map:
 Array.prototype.myMap = function(cb){
-   const res = []
+   //const res = []
    for(let i=0; i<this.length; i++){
     res.push(cb(this[i], i, this))
    }
    return res
 }
-const arr4 = [8,99,0,3]
-const output_arr = arr4.myMap(n => n*2)
-console.log("see----->",output_arr)
+//const arr4 = [8,99,0,3]
+//const output_arr = arr4.myMap(n => n*2)
+//console.log("see----->",output_arr)
 
 
 // Polyfill Promises
 Promise.myAll = function(promises){
     return new Promise((resolve, reject) => {
-        const res = []
-        const completedCount = 0
+        //const res = []
+        //const completedCount = 0
 
         if (promises.length === 0){
             return resolve([])
@@ -412,8 +412,8 @@ Promise.myAll = function(promises){
 
 // Max K duplicates allows
 function allowKdups(arr, k){
-    const counter = {}
-    const res = []
+    //const counter = {}
+    //const res = []
 
     for(let i=0; i<arr.length; i++){
        counter[arr[i]] = (counter[arr[i]] || 0) + 1
@@ -425,7 +425,7 @@ function allowKdups(arr, k){
     return res
 }
 
-console.log(allowKdups([1,1,1,1,2,2,2,2,2,2,3,5,88,9], 2))
+//console.log(allowKdups([1,1,1,1,2,2,2,2,2,2,3,5,88,9], 2))
 
 
 // Add 1 date in a date
@@ -435,12 +435,12 @@ const d = new Date(dateVal)
 
 d.setDate(d.getDate() + 2);
 
-console.log(d.toISOString().split("T")[0])
+//console.log(d.toISOString().split("T")[0])
 
 
 // Polyfill - array map
 Array.prototype.myMap = function(cb){
-    const res = []
+    //const res = []
 
     for(let i=0; i<this.length; i++){
         res.push(cb(this[i], i, this))
@@ -451,7 +451,7 @@ Array.prototype.myMap = function(cb){
 // Polyfill - filter
 
 Array.prototype.myFilter = function(cb){
-    const res = []
+    //const res = []
 
     for (let i=0; i<this.length; i++){
        if(cb[this[i], i, this]){
@@ -464,8 +464,8 @@ Array.prototype.myFilter = function(cb){
 
 // Polyfill - Reduce
 Array.prototype.myReduce = function(cb, initialValue){
-    const acc = initialValue ? initialValue : this[0]
-    const startIndex = initialValue ? 0 : 1
+    //const acc = initialValue ? initialValue : this[0]
+    //const startIndex = initialValue ? 0 : 1
 
     for(let i=startIndex; i<this.length; i++){
         acc = cb(acc, this[i], i , this)
@@ -508,7 +508,7 @@ function thorttle_9(fn, limit){
 // LRU Cache
 class LRU_CACHE{
 
-    // constructor set up
+    // //constructor set up
     constructor(limit){
       this.limit = limit;
       this.cache = new Map();
@@ -520,7 +520,7 @@ class LRU_CACHE{
             return -1
         }
 
-        const val = this.cache.get(key);
+        //const val = this.cache.get(key);
         this.cache.delete(key);
         this.cache.set(key, val);
         return val;
@@ -531,7 +531,7 @@ class LRU_CACHE{
         if(this.cache.has(key)){
             this.cache.delete(key);
         }else if(this.cache.size >= this.limit){ 
-            const firstEle = this.cache.keys().next().value;
+            //const firstEle = this.cache.keys().next().value;
             this.cache.delete(firstEle);
         }
         this.cache.set(key, value)
@@ -544,7 +544,7 @@ function flatten_3(arr){
     let res = []
     for(let ele of arr){
         if(Array.isArray(ele)){
-            const output = flatten_3(ele);
+            //const output = flatten_3(ele);
             res = res.concat(output)
         }else{
             res.push(ele);
@@ -553,12 +553,12 @@ function flatten_3(arr){
     return res;
 }
 
-console.log(flatten_3([2,3,[45,666,[78,90,[0,9]]]]))
+//console.log(flatten_3([2,3,[45,666,[78,90,[0,9]]]]))
 
 // Polyfill - Promise ALL
 Promise.myAll = function(promises){
     return new Promise((resolve, reject)=>{
-       const res = []
+       //const res = []
        let counter = 0;
 
        if(promises.length === 0){
@@ -579,3 +579,26 @@ Promise.myAll = function(promises){
        })
     })
 }
+
+
+// debounce effect
+function debounce_07(fn, delay){
+    let timer;
+    
+    return function(value){
+        clearTimeout(timer);
+
+        timer = setTimeout(()=> {
+            fn(value)
+        }, delay)
+    }
+}
+
+const processDebounce = debounce_07(() => console.log("Hey Debounce is here"), 1000);
+
+// 2. Call the initialized function.
+processDebounce(); 
+processDebounce(); 
+processDebounce();
+
+// LRU cache
