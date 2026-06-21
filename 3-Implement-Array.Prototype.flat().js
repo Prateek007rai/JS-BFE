@@ -1,4 +1,5 @@
 // This is a JavaScript coding problem from BFE.dev 
+// Time: O(n)
 /**
  * @param { Array } arr
  * @param { number } depth
@@ -20,5 +21,5 @@ function flat(arr, depth = 1) {
   return result;
 }
 
-console.log(flat([1, [2], [3, [4]]], 1))
+console.log(flat([1,2,[3,4,[5,6,[7,8,[9]]]]], 2))
 

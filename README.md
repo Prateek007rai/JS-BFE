@@ -25,6 +25,7 @@ let age = 25;       // Block-scoped, mutable
 const pi = 3.14159; // Block-scoped, immutable (cannot be reassigned)
 var oldVar = "xx";  // Function-scoped (legacy, try to avoid)
 
+
 // Data Types
 let name = "JavaScript";      // String
 let is_active = true;         // Boolean

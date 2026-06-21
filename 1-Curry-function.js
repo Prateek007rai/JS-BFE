@@ -4,6 +4,7 @@
 // Step - 3: if not enough args → return another function
 // Step - 4: collect next arguments -> combine old + new args and repeat
 
+
 function curry (fn){
     // collect arguments
     return function curried(...args){
@@ -21,12 +22,11 @@ function curry (fn){
     }
 }
 
-
-
 // test function
 const join = (a, b, c) => {
   return `${a}_${b}_${c}`;
 };
+
 
 // create curried version
 const curriedJoin = curry(join);
