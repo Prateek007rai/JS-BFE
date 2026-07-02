@@ -610,3 +610,18 @@ Array.prototype.myMap = function(cb){
     }
     return res
 }
+
+// flatten the array
+function flatten_arr(arr){
+    let res = []
+
+    for(let i = 0; i<arr.length; i++){
+        if(Array.isArray(arr[i])){
+            //const flat = flatten_arr(arr[i]);
+            res = res.concat(flat)
+        }else{
+            res.push(arr[i])
+        }
+    }
+    return res
+}
