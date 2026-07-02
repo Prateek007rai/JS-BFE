@@ -625,3 +625,19 @@ function flatten_arr(arr){
     }
     return res
 }
+
+// Throttle function
+function throttle (fn, wait){
+    let canRun  = true;
+
+    return function(){
+        if (!canRun) { return }
+   
+        canRun = false;
+        fn();
+        setTimeout(()=> {
+            canRun = true
+        }, wait)
+
+    }
+}
