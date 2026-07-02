@@ -641,3 +641,18 @@ function throttle (fn, wait){
 
     }
 }
+
+// Max K duplicates allows
+function allowKdups(arr, k){
+    //const counter = {}
+    //const res = []
+
+    for(let i=0; i<arr.length; i++){
+       counter[arr[i]] = (counter[arr[i]] || 0) + 1
+
+       if(counter[arr[i]] <= k){
+        res.push(arr[i])
+       }
+    } 
+    return res
+}
