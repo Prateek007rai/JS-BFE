@@ -670,13 +670,13 @@ function debounce (fn, delay) {
 }
 
 // add date in date
-const date = "2026-04-14"
-const newDate = new Date(date);
+const date_00 = "2026-04-14"
+const newDate_00 = new Date(date_00);
 
-newDate.setDate(newDate.getDate() + 1)
+newDate_00.setDate(newDate_00.getDate() + 1)
 
 //throttle function
-function throttle (fn, wait){
+function throttle_99 (fn, wait){
     let canRun  = true;
 
     return function(){
