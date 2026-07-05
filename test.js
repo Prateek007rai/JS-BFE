@@ -18,7 +18,6 @@ function debounce (fn, delay) {
 
 
 // Throttle function
-
 function throttle (fn, wait){
     let canRun  = true;
 
@@ -675,3 +674,19 @@ const date = "2026-04-14"
 const newDate = new Date(date);
 
 newDate.setDate(newDate.getDate() + 1)
+
+//throttle function
+function throttle (fn, wait){
+    let canRun  = true;
+
+    return function(){
+        if (!canRun) { return }
+   
+        canRun = false;
+        fn();
+        setTimeout(()=> {
+            canRun = true
+        }, wait)
+
+    }
+}
